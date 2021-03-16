@@ -7,7 +7,7 @@ public class Account {
      int getBalance() {
          return balance;// return指方法停止並回傳餘額(balance)
      }
-     
+    //提款方法 
     void withdraw(int money){//提款方法=>模子
         //驗證money是否符合存款的條件
         if(money <= 0){
@@ -22,10 +22,11 @@ public class Account {
         }
         balance -= money;
     }
+    //存款方法
     void deposit(int money) {//存款方法=>模子
         //驗證money是否符合存款的條件
         if(money <= 0){
-            System.out.println("存款金額不符");
+            System.out.println("存款金額不符!");
             return;//存款方法到此結束
         }
         balance += money;// += balance + money,這樣錢才可以累加
