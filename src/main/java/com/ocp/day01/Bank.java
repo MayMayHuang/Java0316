@@ -17,7 +17,7 @@ public class Bank {//銀行管理帳戶
         System.out.printf("a03 帳戶餘額: $%,d\n",a03.getBalance());
         //存款
         System.out.println("a01 存款500元後...");
-        a01.deposit(500);//()中為放數字,若沒改file Account 中 int money,無法累加
+        a01.deposit(500);//()中為放數字,若沒改file "Account" 中 deposit及withdraw括號中int money,無法累加
         System.out.printf("a01 帳戶餘額: $%,d\n",a01.getBalance());
         //提款
         System.out.println("a02 提款800元後...");
