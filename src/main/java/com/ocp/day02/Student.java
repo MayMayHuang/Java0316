@@ -11,7 +11,7 @@ public class Student {
         this.name = name;
         this.age = age;
         this.bmi = new BMI(name, height, weight);
-        //this.exam = new Exam(name, chinese, math);
+        //this.exam = new Exam(name, chinese, math);//不給意思是事後才給成績
     }
     
     void print(){

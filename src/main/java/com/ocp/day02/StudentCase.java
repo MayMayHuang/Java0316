@@ -12,6 +12,9 @@ public class StudentCase {
         System.out.println(s1.bmi.getBMIValue());
         //請單獨印出平均分數 資料
         System.out.println(s1.exam.getAvg());
+        //修改數學分數= 75分
+        s1.exam.math =75;
+        s1.print();
     }
     
 }
