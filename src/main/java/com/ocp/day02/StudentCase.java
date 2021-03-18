@@ -10,6 +10,8 @@ public class StudentCase {
         s1.print();
         //請單獨印出bmiValue資料
         System.out.println(s1.bmi.getBMIValue());
+        //請單獨印出平均分數 資料
+        System.out.println(s1.exam.getAvg());
     }
     
 }
