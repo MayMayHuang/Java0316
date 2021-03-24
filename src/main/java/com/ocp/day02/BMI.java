@@ -30,7 +30,7 @@ public class BMI {
     //取得BMI的分析結果
     String getResultValue(){
         double bmiValue = getBMIValue();//直接取得bmi value的計算結果
-        String resultValue = (bmiValue > 23)? "過重":(bmiValue<18)?"過輕":"正常";
+        String resultValue = (bmiValue > 23)?"過重":(bmiValue<18)?"過輕":"正常";
         return resultValue;
         //return 100.0;(不行)
     }
