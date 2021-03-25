@@ -6,7 +6,7 @@ public class Person {
     double w;
     double bmi;
 
-    public Person(double h, double w) {
+    public Person(String name,double h, double w) {
         this.name = name;
         this.h = h;
         this.w = w;
