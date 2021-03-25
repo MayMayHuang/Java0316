@@ -20,6 +20,9 @@ public class ArrayCV {
          System.out.printf("Sum of squares: %.1f\n", sumOfSquares);
          double sd =Math.sqrt((1.0/nums.length) * sumOfSquares);
          System.out.printf("S.D: %.1f\n", sd);
+         //變異係數CV
+         double cv = sd / avg;
+         System.out.printf("C.V: %.1f\n", cv);
     }
     
 }
