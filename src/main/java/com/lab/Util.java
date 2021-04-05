@@ -6,7 +6,7 @@ public class Util {
     //取得int[] 答案陣列
     public static int [] getAnsArray() {
         Random r = new Random();
-        int[] ans = {0,0,0,0,0,0};//new int[4];
+        int[] ans = {0,0,0,0,0,0};//new int[6];
         for (int i = 0; i < ans.length;) {
         //隨機取一個n值(1~9)
         int n = r.nextInt(49) + 1;//48 + 1=>49
