@@ -3,7 +3,9 @@ package com.ocp.day11;
 import java.util.stream.Stream;
 
 public class EmployeeApi {
+
     private static Employee[] employees;
+
     static {
         Employee e1 = new Employee();
         e1.setSalary(3_0000);
@@ -23,19 +25,19 @@ public class EmployeeApi {
         d1.setStockOption(300_0000);
         employees = new Employee[]{e1, e2, e3, m1, m2, d1};
     }
-    
+
     //取得所有員工資料
     public static Employee[] getEmployees() {
         return employees;
     }
-    
+
     //取得總薪資
     public static int getTotalSalary() {
         return Stream.of(employees)
                 .mapToInt(Employee::getSalary)
                 .sum();
     }
-    
+
     //取得平均薪資
     public static double getSalaryOfAvg() {
         return Stream.of(employees)
@@ -43,19 +45,19 @@ public class EmployeeApi {
                 .average()
                 .getAsDouble();
     }
-    
+
     //取得總預算
     public static int getSalaryBudget() {
-        return Stream.of(employees)
-                .filter(e -> e instanceof Manager)
-                .mapToInt(Manager::getBudget)
+        return Stream.of(employees)//Employee串流=>只有getSalary
+                .filter(e -> e instanceof Manager)//Employee串流
+                .map(e -> (Manager)e)//Manager串流
+                .mapToInt(e -> e.getBudget())//Employee串流
                 .sum();
     }
-    
+
     //員工總數
     public static int amount() {
         return getEmployees().length;
     }
-    
-    
+
 }
