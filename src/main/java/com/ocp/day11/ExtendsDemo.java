@@ -55,6 +55,21 @@ public class ExtendsDemo {
         //Java 8(使用方法參考 ::)
         int sum4 = Stream.of(employees).mapToInt(Employee::getSalary).sum();
         System.out.printf("總薪資: %,d\n", sum4);
+        //請問Manager的總薪資(salary)是多少?
+        System.out.println("請問Manager總薪資(salary)是多少?");
+        //Java 7
+        int sum5 = 0;
+        for(Employee e:employees) {
+            //System.out.println(e.getClass().getSimpleName());//getName=>全名,getSImpleName=>職稱
+            if(e.getClass().getSimpleName().equals("Manager")){
+                sum5 += e.getSalary();
+            }
+            if(e.getClass().getSimpleName().equals("Director")){
+                sum5 += e.getSalary();
+        }
+        
     }
-    
+    System.out.printf("Manager總薪資: %,d\n",sum5);
+    //Java 8
+   }
 }
