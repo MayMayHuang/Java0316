@@ -47,17 +47,17 @@ public class EmployeeApi {
     }
 
     //取得總預算
-    public static int getSalaryBudget() {
+    public static int getTotalBudget() {
         return Stream.of(employees)//Employee串流=>只有getSalary
-                .filter(e -> e instanceof Manager)//Employee串流
+                .filter(e -> e instanceof Manager)//Employee串流,instanceof=>到底是不是的意思
                 .map(e -> (Manager)e)//Manager串流
                 .mapToInt(e -> e.getBudget())//Employee串流,沒有上一行,getBudget有問題
                 .sum();
     }
 
     //員工總數
-    public static int amount() {
-        return getEmployees().length;
+    public static int getAmount() {
+        return employees.length;
     }
 
 }
