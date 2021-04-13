@@ -51,7 +51,7 @@ public class EmployeeApi {
         return Stream.of(employees)//Employee串流=>只有getSalary
                 .filter(e -> e instanceof Manager)//Employee串流
                 .map(e -> (Manager)e)//Manager串流
-                .mapToInt(e -> e.getBudget())//Employee串流
+                .mapToInt(e -> e.getBudget())//Employee串流,沒有上一行,getBudget有問題
                 .sum();
     }
 
