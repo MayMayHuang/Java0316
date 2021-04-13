@@ -19,6 +19,7 @@ public class Main {
         System.out.println("5.員工總數");
         System.out.println("9.離開");
         System.out.println("--------------");
+        System.out.print("請選擇:");
         Scanner sc = new Scanner(System.in);
         int idx = sc.nextInt();
         switch(idx){
