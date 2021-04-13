@@ -71,5 +71,26 @@ public class ExtendsDemo {
     }
     System.out.printf("Manager總薪資: %,d\n",sum5);
     //Java 8
+    int sum6 = Stream.of(employees)
+                     .filter(e -> e.getClass().getSimpleName().equals("Manager")||
+                                  e.getClass().getSimpleName().equals("Director"))
+                     .mapToInt(Employee::getSalary)
+                     .sum(); 
+    System.out.printf("Manager總薪資: %,d\n",sum6);
+     //請問Manager的總薪資(salary)是多少 Part II?
+        System.out.println("請問Manager的總薪資(salary)是多少 Part II?");
+        //利用instanceof運算子=>布林值
+        for(Employee e : employees) {
+            System.out.println(e instanceof Manager);
+        }
+        int sum7 = Stream.of(employees)
+                         .filter(e -> e instanceof Manager)
+                         //.peek(e -> System.out.println(e))
+                         .mapToInt(Employee::getSalary)
+                         //.peek(e -> System.out.println(e))
+                         .peek(System.out::println)//顯示目前串流裡面的東西,不影響邏輯
+                         .sum();
+        System.out.printf("Manager總薪資: %,d\n",sum7);
+        
    }
 }
