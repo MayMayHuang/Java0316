@@ -8,7 +8,7 @@ public class Tiger extends Cat {
      
     }
     public void hunter() {
-        System.out.println("獵");
+        System.out.println("獵殺");
     }
     
 }
