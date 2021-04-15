@@ -4,6 +4,9 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class OverloadingDemo2 {
+    public void calc(int x) {//先做這個,再做下面...
+        System.out.println(x);
+    }
     //public void calc(int x, int y) {
     //    System.out.println(x + y);
     //}
