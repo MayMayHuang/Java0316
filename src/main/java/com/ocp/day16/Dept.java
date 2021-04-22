@@ -9,7 +9,7 @@ public class Dept {//外部類別
         public void job(){
             String name = "寫程式";
             System.out.printf("%s 在%s公司的 %s部門下 %s\n",
-                    this.name, companyName, Dept.this.name, name
+                    this.name, Dept.companyName, Dept.this.name, name
             );//IT=>Dept,
             
         }
