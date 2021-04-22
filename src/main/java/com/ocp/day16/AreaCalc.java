@@ -15,6 +15,14 @@ public class AreaCalc {
         };
         System.out.println(ca2.getArea(r));
         //匿名內部類別(圓體積)
+        CircleArea ca3 = new CircleArea() {
+            @Override
+            public double getArea(double r) {
+                return 4/3 * Math.pow(r, 3) * Math.PI;
+            }
+        };
+        System.out.println(ca3.getArea(r));
+        
     }
     
 }
