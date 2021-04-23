@@ -13,7 +13,4 @@ public class Art extends Employee{
     public void job() {
         System.out.println("繪圖");
     }
-    
-    
-    
 }
