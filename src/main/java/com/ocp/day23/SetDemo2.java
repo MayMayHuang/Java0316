@@ -12,13 +12,12 @@ public class SetDemo2 {
         scores.add(2000);
         scores.add(90);
         scores.add(80);
-        scores.add(100);
-        scores.add(3.14);
+        scores.add(3.14);//3.14是double,所以filter時,delete
         scores.add(true);
         System.out.println(scores);
         //過濾資料
         Iterator iter = scores.iterator();
-        while (iter.hasNext()) {//正面表列
+        while (iter.hasNext()) {//正面表列,wh List中,choose 3
             Object next = iter.next();
             if(next instanceof Integer){
                 int score = (Integer)next;
@@ -31,6 +30,16 @@ public class SetDemo2 {
         } 
         System.out.println(scores);
         //求總分
+        int sum =0;
+        iter = scores.iterator();//重新取得走訪器
+        while (iter.hasNext()) {
+            Object next = iter.next();
+            if(next instanceof Integer) {//轉型時,最好有instanceof
+                sum += (Integer)next;
+            }
+            
+        }
+        System.out.println(sum);
       }
    }
         
