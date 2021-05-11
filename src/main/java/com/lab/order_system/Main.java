@@ -12,7 +12,9 @@ public class Main {
     private static boolean play = true;
     
     public static void main(String[] args) throws Exception {
-        menu();
+       while(play){
+           menu();
+       }
     }
     
     public static void menu() {
