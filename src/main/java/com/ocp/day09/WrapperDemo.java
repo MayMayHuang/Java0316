@@ -1,6 +1,5 @@
 package com.ocp.day09;
 
-import jdk.internal.org.objectweb.asm.commons.StaticInitMerger;
 
 public class WrapperDemo {
     public static void main(String[] args) {
