@@ -7,16 +7,16 @@ import static com.lab.cdc.Util.getJson;
 import org.junit.Test;
 
 public class Test_Util {
-    @Test
-    public void test_getJson() throws Exception{
-        String json = Util.getJson();
-        System.out.println(json);
-    }
-    @Test
-    public void test_getCdcs() throws Exception {
-        CDC[] cdcs = Util.getCdcs();
-        System.out.println(cdcs.length);
-    }
+    //@Test
+    //public void test_getJson() throws Exception{
+    //    String json = Util.getJson();
+    //    System.out.println(json);
+    //}
+    //@Test
+    //public void test_getCdcs() throws Exception {
+    //    CDC[] cdcs = Util.getCdcs();
+    //    System.out.println(cdcs.length);
+    //}
     @Test
     public void test_distance(){
         String circle ="22.39,114.12";
