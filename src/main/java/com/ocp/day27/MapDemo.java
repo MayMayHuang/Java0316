@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 public class MapDemo {
     public static void main(String[] args) {
-        Map map1 = new Hashtable();//HashMap();//TreeMap();
+        Map map1 = new HashMap();//HashMap();//TreeMap();
         map1.put("B",100);
         map1.put("C",80);
         map1.put("E",80);
