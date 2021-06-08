@@ -14,7 +14,7 @@ public class Cookies {
         System.out.printf("小狗吃了第 %d 塊餅乾\n", i);
         // 吃完之後
         empty = true; // 盤子變空
-        notifyAll(); // 呼叫主人
+        notify(); // 呼叫主人
     }
     public synchronized void put(int i) {
         while(empty == false) { // 盤子不是空的
@@ -28,6 +28,6 @@ public class Cookies {
         System.out.printf("主人放了第 %d 塊餅乾\n", i);
         // 主人放完之後
         empty = false; // 盤子非空
-        notifyAll(); // 呼叫小狗
+        notify(); // 呼叫小狗
     }
 }

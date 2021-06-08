@@ -10,7 +10,7 @@ public class PutThread extends Thread {
     @Override
     public void run() {
         for(int i=1;i<=10;i++) {
-            cookies.eat(i);
+            cookies.put(i);
         }
     }
     
