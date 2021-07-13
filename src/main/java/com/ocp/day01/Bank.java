@@ -25,7 +25,7 @@ public class Bank {//銀行管理帳戶
         System.out.printf("a02 帳戶餘額: $%,d\n",a02.getBalance());
         //存款
         System.out.println("a03 存款-1200元後...");
-        a02.withdraw(-1200);
+        a02.deposit(-1200);
         System.out.printf("a03 帳戶餘額: $%,d\n",a03.getBalance());
         //提款
         System.out.println("a03 提款5000元後...");
